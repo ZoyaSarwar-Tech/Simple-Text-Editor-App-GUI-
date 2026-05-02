@@ -27,7 +27,7 @@ def open_file():
             current_file=file_path
             root.title(f"Text Editor App - {file_path}")
         except Exception as e:
-            messagebox.showerror(f"Error","file open ni hui: {e}")
+            messagebox.showerror("Error",f"file open ni hui: {e}")
 def save_file():
     global current_file
     if current_file:
@@ -36,7 +36,7 @@ def save_file():
                 file.write(text_area.get(1.0,tk.END))
             messagebox.showinfo("info","file save  hogai")
         except Exception as e:
-            messagebox.showerror(f"Error","file save ni hui: {e}")
+            messagebox.showerror("Error",f"file save ni hui: {e}")
     else:
         save_as_file()
 def save_as_file():
@@ -50,7 +50,7 @@ def save_as_file():
                 root.title(f"Text Editor App - {file_path}")
             messagebox.showinfo("info","file save  hogai")
         except Exception as e:
-            messagebox.showerror(f"Error","file save ni hui: {e}")
+            messagebox.showerror("Error",f"file save ni hui: {e}")
 def exit_app():
      if messagebox.askokcancel("Exit","Kia ap exit krna chahtay ho?"):
          root.destroy()
